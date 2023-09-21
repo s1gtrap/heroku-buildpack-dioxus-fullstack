@@ -120,6 +120,9 @@ if [ ! -x "$CARGO_HOME/bin/rustc" ]; then
   exit 1
 fi
 
+# Install wasm target
+rustup target add wasm32-unknown-unknown
+
 # Install dioxus-cli
 cargo install --git https://github.com/DioxusLabs/dioxus dioxus-cli
 
